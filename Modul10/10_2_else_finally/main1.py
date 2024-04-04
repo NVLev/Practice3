@@ -7,7 +7,7 @@ try:
     rivi = input('Syötä rivi: ')
     tiedosto = open('tiedosto.txt', 'w')
     tiedosto.write(rivi)
-except (FileExistsError, PermissionError, IsADirectoryError) as exc:
+except (FileExistsError, PermissionError, FileNotFoundError) as exc:
     print('Virhe! Jokin meni pieleen')
 except ValueError as exc:
     print('Virhe! Väärät tiedot')
